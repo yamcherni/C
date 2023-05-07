@@ -1,0 +1,13 @@
+; file ex2.am
+MAIN: sub r3 ,HIGH
+END: stop
+LOOP: prn #-5
+L1: inc HIGH
+add r3,r2
+bne HIGH
+.entry LOOP
+bne LOOP(HIGH,LOW)
+HIGH: .data 23
+.extern LOW
+.entry HIGH
+.extern WE

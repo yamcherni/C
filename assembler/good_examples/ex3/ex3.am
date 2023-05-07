@@ -1,0 +1,14 @@
+; file ex3.am
+MAIN: sub r6 ,HIGH
+END: stop
+LOOP: prn #-88
+L1: inc HIGH
+add r5,r2
+bne HIGH
+.entry LOOP
+bne LOOP(HIGH,LOW)
+HIGH: .data 45, 67, 22
+add r1,r7
+bne END
+.extern LOW
+.entry HIGH
